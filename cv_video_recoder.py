@@ -1,11 +1,14 @@
 import cv2
-import numpy as np
+
 
 def main():
     cap = cv2.VideoCapture("rtsp://210.99.70.120:1935/live/cctv001.stream")
     if not cap.isOpened():
         print("Error: Unable to open camera")
         return
+    
+    # 백그라운드 서브트랙터 객체 생성
+    bg_subtractor = cv2.createBackgroundSubtractorMOG2()
     
     # 카메라 속성 가져오기
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -23,6 +26,9 @@ def main():
             print("Error: Unable to read frame")
             break
         
+        # 백그라운드 서브트랙터를 사용하여 배경과의 차이 계산
+        fg_mask = bg_subtractor.apply(frame)
+        
         # Record 모드인 경우 화면에 빨간색 원 표시
         if record_mode:
             cv2.circle(frame, (50, 50), 10, (0, 0, 255), -1)
@@ -33,6 +39,7 @@ def main():
         
         # 화면 출력
         cv2.imshow('Camera', frame)
+        cv2.imshow('Foreground Mask', fg_mask)  # 전경 마스크 표시
         
         key = cv2.waitKey(1)
         if key == 27:  # ESC 키를 누르면 종료
@@ -47,6 +54,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
 
     

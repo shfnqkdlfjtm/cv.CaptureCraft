@@ -2,6 +2,11 @@
 The magic of video recording: OpenCV makes it easy and easy
 
 
+
+![녹화화면](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/1ef0b8c9-e43c-4d41-b817-c45225bfb936)
+![원본 카메라](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/6744ff9a-9a71-44c7-b6c6-1923d5326190)
+
+
 import cv2
 
 

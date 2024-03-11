@@ -1,13 +1,9 @@
 # cv.CaptureCraft
 The magic of video recording: OpenCV makes it easy and easy
 
-코드 실행 시 나타나는 원본 카메라 화면(우)과 subtraction filter기능을 적용한 화면(좌)
-![원본 카메라](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/6744ff9a-9a71-44c7-b6c6-1923d5326190)
-space키를 누르면 녹화시작과 녹화중이라는 것을 알려주는 빨간 원이 나타남
-![녹화화면](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/1ef0b8c9-e43c-4d41-b817-c45225bfb936)
 
 
-#프로그램 및 기능 설명
+# 프로그램 및 기능 설명
 import cv2  as cv
 
 
@@ -64,3 +60,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+코드 실행 시 나타나는 원본 카메라 화면(우)과 subtraction filter기능을 적용한 화면(좌)
+![원본 카메라](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/6744ff9a-9a71-44c7-b6c6-1923d5326190)
+
+space키를 누르면 녹화시작과 녹화중이라는 것을 알려주는 빨간 원이 나타남
+![녹화화면](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/1ef0b8c9-e43c-4d41-b817-c45225bfb936)

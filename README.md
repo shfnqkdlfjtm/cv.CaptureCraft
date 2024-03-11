@@ -3,12 +3,13 @@ The magic of video recording: OpenCV makes it easy and easy
 
 
 
-# 프로그램 및 기능 설명
+## 프로그램 및 기능 설명
 import cv2  as cv
 
 
 def main():
     video = cv.VideoCapture("rtsp://210.99.70.120:1935/live/cctv001.stream")
+    
     if not video.isOpened():
         print("Error: Unable to open camera")
         return

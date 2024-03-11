@@ -4,7 +4,7 @@ The magic of video recording: OpenCV makes it easy and easy
 
 
 ## 프로그램 및 기능 설명
-import cv2  as cv
+  import cv2  as cv
 
 
 def main():

@@ -7,6 +7,7 @@ The magic of video recording: OpenCV makes it easy and easy
 ![녹화화면](https://github.com/shfnqkdlfjtm/cv.CaptureCraft/assets/144716487/1ef0b8c9-e43c-4d41-b817-c45225bfb936)
 
 
+#프로그램 및 기능 설명
 import cv2  as cv
 
 

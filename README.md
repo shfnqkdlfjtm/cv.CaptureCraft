@@ -4,12 +4,11 @@ The magic of video recording: OpenCV makes it easy and easy
 
 
 ## 프로그램 및 기능 설명
-  import cv2  as cv
-
+import cv2  as cv
 
 def main():
+    # 비디오 캡처 객체 생성
     video = cv.VideoCapture("rtsp://210.99.70.120:1935/live/cctv001.stream")
-    
     if not video.isOpened():
         print("Error: Unable to open camera")
         return
@@ -26,7 +25,7 @@ def main():
     fourcc = cv.VideoWriter_fourcc(*'XVID')
     out = cv.VideoWriter('output.avi', fourcc, fps, (frame_width, frame_height))
     
-    record_mode = False
+    record_mode = False  # 녹화 모드 초기화
     while True:
         ret, frame = video.read()
         if not ret:
@@ -48,6 +47,7 @@ def main():
         cv.imshow('Camera', frame)
         cv.imshow('Foreground Mask', fg_mask)  # 전경 마스크 표시
         
+        # 키 입력 처리
         key = cv.waitKey(1)
         if key == 27:  # ESC 키를 누르면 종료
             break
